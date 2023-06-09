@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-export default function useLocaleStorage(key, defaultValue) {
+export default function useLocalStorage(key, defaultValue) {
   const [state, setState] = useState(() => {
-    return JSON.parse(window.localStorage.getItem(key) ?? defaultValue);
+    return JSON.parse(window.localStorage.getItem(key)) ?? defaultValue;
     //^ записуємо у локал сторедж те що користувач вписує , якщо нічого не має то буде значення по дефолту
   });
 
